@@ -1,0 +1,34 @@
+{
+  "name": "gbgcity",
+  "description": "Gothenburg City Webservice API wrapper for Node.js",
+  "version": "0.1.0",
+  "main": "index.js",
+  "keywords": [ "gothenburg", "gbg", "gbgcity" ],
+  "tags": [ "gothenburg", "gbg", "gbgcity" ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/oskarhagberg/gbgcity.git"
+  },
+  "bugs": {
+    "url": "https://github.com/oskarhagberg/gbgcity/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/oskarhagberg/gbgcity/raw/master/LICENSE"
+    }
+  ],
+  "dependencies": {},
+  "engines": {
+    "node": ">= 0.4.x"
+  },
+  "homepage": "https://github.com/oskarhagberg/gbgcity",
+  "author": "Oskar Hagberg (http://oskarhagberg.com)",
+  "directories": {
+    "lib": "./lib",
+    "doc": "./doc"
+  },
+  "scripts": {
+    "test": "node test.js"
+  }
+}
