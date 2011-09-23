@@ -1,1 +1,1 @@
-require("./test/gbgcity-test");
+require("./test/gbgcity.test");
