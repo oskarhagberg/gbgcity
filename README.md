@@ -14,6 +14,10 @@ Gothenburg City Webservice API wrapper for Node.js.
 
 ## More Information
 
+## Credits
+
+This module is inspired by Clint Andrew Hall's [node-foursquare](https://github.com/clintandrewhall/node-foursquare) module.
+
 ## License 
 
 (The MIT License)
