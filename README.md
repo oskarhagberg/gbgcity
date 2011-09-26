@@ -8,6 +8,8 @@ Gothenburg City Webservice API wrapper for Node.js.
 
 ## Quick Start
 
+First you need to get access to the API by requesting a key at http://data.goteborg.se/.
+
 ## Version History
 
 * v0.1.0 - First release
