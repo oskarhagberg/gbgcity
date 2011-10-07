@@ -15,7 +15,8 @@ function TestSuite() {
   var Tests = {
     "WaterFlow" : {},
     "Parking" : {},
-    "StyrOchStall": {}
+    "StyrOchStall": {},
+    "TravelTime": {}
   };
 
   Tests.WaterFlow.getMeasureStations = function() {
@@ -130,6 +131,74 @@ function TestSuite() {
         try {
           assert.ok(result);
           assert.equal(result.Stations[0].Label, 'LILLA BOMMEN');
+          ok(test);
+        } catch (e) {
+          reportError(test, e);
+        }
+      }
+    });
+  };
+  
+  Tests.TravelTime.getRoutes = function() {
+    var test = "gbgcity.TravelTime.getRoutes()";
+    gbgcity.TravelTime.getRoutes(null, function(error, result){
+      if(error) {
+        reportError(test, error.message);
+      } else {
+        try{  
+          assert.ok(result);
+          assert.ok(result.length > 0);
+          ok(test);
+        } catch (e) {
+          reportError(test, e);
+        }
+      }
+    });
+  };
+  
+  Tests.TravelTime.getRoute = function() {
+    var test = "gbgcity.TravelTime.getRoute(id=20104)";
+    gbgcity.TravelTime.getRoute(20104, null, function(error, result){
+      if(error) {
+        reportError(test, error.message);
+      } else {
+        try{  
+          assert.ok(result);
+          assert.equal(result.Length, 6239);
+          ok(test);
+        } catch (e) {
+          reportError(test, e);
+        }
+      }
+    });
+  };
+  
+  Tests.TravelTime.getLatestTravelTimes = function() {
+    var test = "gbgcity.TravelTime.getLatestTravelTimes()";
+    gbgcity.TravelTime.getLatestTravelTimes(null, function(error, result){
+      if(error) {
+        reportError(test, error.message);
+      } else {
+        try{
+          assert.ok(result);
+          assert.ok(result.length > 0);
+          ok(test);
+        } catch (e) {
+          reportError(test, e);
+        }
+      }
+    });
+  };
+  
+  Tests.TravelTime.getLatestTravelTime = function() {
+    var test = "gbgcity.TravelTime.getLatestTravelTime(id=20104)";
+    gbgcity.TravelTime.getLatestTravelTime(20104, null, function(error, result){
+      if(error) {
+        reportError(test, error.message);
+      } else {
+        try{  
+          assert.ok(result);
+          assert.equal(result.RouteID, 20104);
           ok(test);
         } catch (e) {
           reportError(test, e);
