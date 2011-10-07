@@ -16,7 +16,8 @@ function TestSuite() {
     "WaterFlow" : {},
     "Parking" : {},
     "StyrOchStall": {},
-    "TravelTime": {}
+    "TravelTime": {},
+    "AirQuality": {}
   };
 
   Tests.WaterFlow.getMeasureStations = function() {
@@ -199,6 +200,41 @@ function TestSuite() {
         try{  
           assert.ok(result);
           assert.equal(result.RouteID, 20104);
+          ok(test);
+        } catch (e) {
+          reportError(test, e);
+        }
+      }
+    });
+  };
+  
+  Tests.AirQuality.getLatestMeasurement = function() {
+    var test = "gbgcity.AirQuality.getLatestMeasurement()";
+    gbgcity.AirQuality.getLatestMeasurement(null, function(error, result){
+      if(error) {
+        reportError(test, error.message);
+      } else {
+        try{  
+          assert.ok(result);
+          assert.ok(result.AirQuality);
+          ok(test);
+        } catch (e) {
+          reportError(test, e);
+        }
+      }
+    });
+  };
+  
+  Tests.AirQuality.getMeasurements = function() {
+    var test = "gbgcity.AirQuality.getMeasurements()";
+    gbgcity.AirQuality.getMeasurements(null, null, null, function(error, result){
+      if(error) {
+        reportError(test, error.message);
+      } else {
+        try{  
+          assert.ok(result);
+          assert.ok(result.length > 0);
+          assert.ok(result[0].AirQuality);
           ok(test);
         } catch (e) {
           reportError(test, e);
