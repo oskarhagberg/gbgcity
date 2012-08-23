@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/oskarhagberg/gbgcity.png)](http://travis-ci.org/oskarhagberg/gbgcity)
 # gbgcity
 
 Gothenburg City Webservice API wrapper for Node.js.
